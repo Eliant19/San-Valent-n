@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>¿Quieres ser mi San Valentín mi amorcito?</title>
+<style>
+body {
+  background-color: #fce0ef; /* Fondo rosa claro */
+  text-align: center;
+  font-family: sans-serif;
+}
+#pregunta {
+  margin-top: 100px;
+  font-size: 2em;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#si {
+  background-color: #a7f58d; /* Verde claro */
+}
+#no {
+  background-color: #f08080; /* Rojo claro */
+  position: absolute;
+}
+</style>
+</head>
+<body>
+
+<div id="pregunta">¿Quieres ser mi San Valentín amorcito uwu?</div>
+<button id="si">Sí</button>
+<button id="no">No</button>
+
+<script>
+const noBtn = document.getElementById('no');
+const siBtn = document.getElementById('si');
+
+noBtn.addEventListener('mouseover', () => {
+  const maxX = window.innerWidth - noBtn.offsetWidth;
+  const maxY = window.innerHeight - noBtn.offsetHeight;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  noBtn.style.left = randomX + 'px';
+  noBtn.style.top = randomY + 'px';
+});
+
+siBtn.addEventListener('click', () => {
+  alert('¡Sabía que dirías que sí Elinet! ❤️');
+});
+</script>
+
+</body>
+</html>
