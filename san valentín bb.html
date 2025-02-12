@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ff6666;
+            margin-top: 50px;
+        }
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            border-radius: 10px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        #si {
+            background-color: #66ff66;
+            color: #ffffff;
+        }
+        #no {
+            background-color: #ff6666;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        function moverNo() {
+            var noButton = document.getElementById("no");
+            var maxX = window.innerWidth - noButton.offsetWidth;
+            var maxY = window.innerHeight - noButton.offsetHeight;
+            noButton.style.left = Math.floor(Math.random() * maxX) + "px";
+            noButton.style.top = Math.floor(Math.random() * maxY) + "px";
+        }
+        function mostrarMensaje() {
+            alert("¡Sabía que dirías que sí! ❤️");
+        }
+    </script>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín?</h1>
+    <button id="si" onclick="mostrarMensaje()">Sí</button>
+    <button id="no" onclick="moverNo()">No</button>
+</body>
+</html>
